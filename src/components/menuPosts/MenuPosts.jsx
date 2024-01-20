@@ -25,7 +25,7 @@ const MenuPosts = async ({ withImage }) => {
   return (
     <div className={styles.items}>
        {res.mostView.map(e=>(
-        <Link href="/" className={styles.item}>
+        <Link key={e.catSlug} href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
             <Image src="/p1.jpeg" alt="" fill className={styles.image} />
