@@ -17,7 +17,7 @@ import dynamic from "next/dynamic";
 
 const WritePage = () => {
   const { status } = useSession();
-  const ReactQuill = dynamic(()=>import('react-quill'),{ssr:false});
+  const ReactQuill = dynamic(() => import('react-quill'), {ssr:false});
   const router = useRouter();
 
   const [open, setOpen] = useState(false);
@@ -79,7 +79,7 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
+    const res = await fetch("https://lamak.vercel.app/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
