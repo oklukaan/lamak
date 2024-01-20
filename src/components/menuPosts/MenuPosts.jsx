@@ -7,7 +7,7 @@ import styles from "./menuPosts.module.css"
 
 const geData = async () =>{
   const res = await fetch(
-    `http:localhost:3000/api/view`,
+    `http://lamak.vercel.app/api/view`,
     {
       cache: "no-store",
     }
